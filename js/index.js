@@ -14,6 +14,21 @@ document.addEventListener('DOMContentLoaded', function() {
     event.preventDefault();
     console.log('form submitted');
 
+  var todoInput = document.querySelector('.todo');
+  console.log(todoInput);
+
+  var todoValue = todoInput.value;
+    console.log(todoValue);
+
+  var p = document.createElement('p');
+  p.innerHTML = todoValue;
+  console.log(p);
+
+  var todoContainer = document.querySelector('.todo-container');
+  todoContainer.appendChild(p);
+
+
+
   });
 
 
