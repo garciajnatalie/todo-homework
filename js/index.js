@@ -20,12 +20,33 @@ document.addEventListener('DOMContentLoaded', function() {
   var todoValue = todoInput.value;
     console.log(todoValue);
 
-  var p = document.createElement('p');
-  p.innerHTML = todoValue;
-  console.log(p);
+  var ul = document.createElement('li');
+  ul.innerHTML = todoValue;
+  console.log(ul);
 
-  var todoContainer = document.querySelector('.todo-container');
-  todoContainer.appendChild(p);
+  var todoContainer = document.querySelector('.todo-bullet');
+  todoContainer.appendChild(ul);
+
+  //adding in class work - NEED TO UPDATE TO KEEP ON PAGE AND ROTATE
+  document.addEventListener('DOMContentLoaded', function() {
+  var putElementOnPage = function(text) {
+    var p = document.createElement(p);
+    p.innerHTML = text;
+    var container = document.querySelector('.todo-container')
+    container.apppendChild(p);
+
+}
+
+  putElementOnPage('Grocery shopping');
+  putElementOnPage('Pick up dry cleaning');
+  putElementOnPage('Clean bathroom');
+
+  //end of class work add in
+
+    });
+
+
+
 
 
 
