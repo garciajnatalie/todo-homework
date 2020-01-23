@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var todoInput = document.querySelector('.todo');
   console.log(todoInput);
-
   var todoValue = todoInput.value;
     console.log(todoValue);
 
@@ -24,9 +23,65 @@ document.addEventListener('DOMContentLoaded', function() {
   ul.innerHTML = todoValue;
   console.log(ul);
 
-  var todoContainer = document.querySelector('.todo-bullet');
-  todoContainer.appendChild(ul);
 
+
+  //connect to ul
+  //add li with string
+  //set innerHTML to string --- THIS IS STILL WRONG
+  var todoContainer = document.querySelector('.todo-bullet');
+    var ul = document.querySelector('.todo-bullet');
+    var li = document.createElement('li');
+    li.innerHTML = todoValue;
+    todoContainer.appendChild(li);
+
+    var ulBtn = document.querySelector('li');
+    var btn = document.createElement("BUTTON");
+    btn.innerHTML = "Remove";
+    document.body.appendChild(btn);
+    console.log(btn);
+
+    var removeBtn = function(){
+      var removeBtn1 = document.getElementByClassName(".button").addEventListener('click');
+      removeBtn.remove();
+      console.log('button removed');
+}
+/*
+    //attempting array insert 1.22
+    var todoList = ['Grocery shopping', 'Pick up dry cleaning', 'Clean bathroom'];
+    console.log(todoList);
+
+    var todo1 = todoList[0];
+    var todo2 = todoList[1];
+    var todo3 = todoList[2];
+    console.log(todo1);
+    console.log(todo2);
+    console.log(todo3);
+
+  var writeTextTodo1 = function() {
+    var todoContainer = document.querySelector('.todo-bullet');
+    var textTodo1 = document.createTextNode('Grocery Shopping');
+    li.innerHTML = textTodo1;
+    writeTextTodo1.appendChild(li);
+  }
+
+
+
+/*
+  var writeTodo = function() {
+    var ul = document.querySelector('.todo-bullet');
+    var li = document.createElement('li');
+    var text = 'Grocery shopping';
+    li.innerHTML = text;
+    ul.appendChild(li);
+  }
+
+
+  //writeToDo('Grocery shopping');
+  //writeToDo('Pick up dry cleaning');
+  //writeToDo('Clean bathroom');
+
+
+/*
   //adding in class work - NEED TO UPDATE TO KEEP ON PAGE AND ROTATE
   document.addEventListener('DOMContentLoaded', function() {
   var putElementOnPage = function(text) {
@@ -34,16 +89,29 @@ document.addEventListener('DOMContentLoaded', function() {
     p.innerHTML = text;
     var container = document.querySelector('.todo-container')
     container.apppendChild(p);
+    }
 
-}
+  var todoItems = ['Grocery shopping' + 'Pick up dry cleaning' + 'Clean bathroom'];
+  console.log(todoItems);
 
-  putElementOnPage('Grocery shopping');
-  putElementOnPage('Pick up dry cleaning');
-  putElementOnPage('Clean bathroom');
+  document.getElementbyId('.todo-bullet').innerHTML = todoItems;
+  document.getElementById('.todo-bullet').appendChild(ul);
+
+ adds shores to list when add a task doesn't keep them there
+  var todoItemsDisplay = function(todoItems) {
+    var ul = document.getElementbyId('li');
+    ul.innerHTML = todoItems;
+    console.log(todoItems);
+
+    var todoContainer = document.querySelector('.todo-bullet');
+    todoContainer.appendChild(ul);
+  */
+
+
 
   //end of class work add in
 
-    });
+    //});
 
 
 
@@ -51,7 +119,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   });
-
 
 
 
