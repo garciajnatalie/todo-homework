@@ -19,9 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
   var todoValue = todoInput.value;
     console.log(todoValue);
 
-  var ul = document.createElement('li');
-  ul.innerHTML = todoValue;
-  console.log(ul);
+  var li = document.createElement('li');
+  li.innerHTML = todoValue;
+  console.log(li);
 
 
 
@@ -29,28 +29,49 @@ document.addEventListener('DOMContentLoaded', function() {
   //add li with string
   //set innerHTML to string --- THIS IS STILL WRONG
   var todoContainer = document.querySelector('.todo-bullet');
-    var ul = document.querySelector('.todo-bullet');
-    var li = document.createElement('li');
-    li.innerHTML = todoValue;
     todoContainer.appendChild(li);
 
-    var ulBtn = document.querySelector('li');
-    var btn = document.createElement("BUTTON");
+    //add button
+    var btn = document.createElement('button');
     btn.innerHTML = "Remove";
-    document.body.appendChild(btn);
+    li.appendChild(btn);
     console.log(btn);
 
-    var removeBtn = function(){
-      var removeBtn1 = document.getElementByClassName(".button").addEventListener('click');
-      removeBtn.remove();
-      console.log('button removed');
-}
+    btn.addEventListener('click', function() {
+      li.remove();
+    });
+
+
+    //document.querySelector('button');
+    //button.closest('li').remove();
+//    var todoBtn = document.querySelector('button');
+  //    var removeTodoBtn = todoBtn.closest('li').remove(todoValue);
+    //  console.log('remove button');
+
+
 /*
+    var removeTodoBtn = function(removeBtn) {
+      var li = removeBtn.target;
+      var todoBtn = querySelector('li');
+      var ul = document.getElementByClass('.button').addEaddEventListener('click');
+      li.parentNode.removechild(btn);
+    }
+*/
+/*
+
+//array
+//loop (if loop and fxn created )
+//reusuable fxn
+
+
     //attempting array insert 1.22
     var todoList = ['Grocery shopping', 'Pick up dry cleaning', 'Clean bathroom'];
     console.log(todoList);
 
     var todo1 = todoList[0];
+    li.innerHTML = todo1;
+    todo1.appendChild(ul);
+
     var todo2 = todoList[1];
     var todo3 = todoList[2];
     console.log(todo1);
