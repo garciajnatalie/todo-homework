@@ -9,6 +9,23 @@ document.addEventListener('DOMContentLoaded', function() {
 //Bonus - Try to add a remove button that destroys the list item 
 //Bonus 2 - Begin styling your todo list 
 
+
+/*
+  // from class
+  var todos = ['']
+
+  var createListItem = function(todoItem) {
+    var list = document.querySelector('.todo-list');
+
+    var li = document.creatElement('li')
+    li.innerhtml = todoItem;
+  }
+  todos.forEach(function(todo) {
+      createListItem(todo);
+  })
+  //end from class */
+
+// start my hw
   var form = document.querySelector('form');
   form.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -20,10 +37,24 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log(todoValue);
 
   var li = document.createElement('li');
-  li.innerHTML = todoValue;
+  li.innerHTML = (todoValue + ' ');
   console.log(li);
 
+/*
+  //attempt stay on page
 
+  var todoList = ['Grocery shopping', 'Pick up dry cleaning', 'Clean bathroom'];
+  console.log(todoList);
+
+  var createListItem = function(todoList) {
+    var list = document.querySelector('.todo');
+
+    var li = document.creatElement('li')
+    li.innerhtml = todoList;
+  }
+  todoList.forEach(function(todoList) {
+      createListItem(todoList);
+  })*/
 
   //connect to ul
   //add li with string
